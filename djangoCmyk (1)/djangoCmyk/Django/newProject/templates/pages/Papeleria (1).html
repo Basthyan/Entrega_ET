@@ -1,0 +1,104 @@
+{% extends "base.html" %} {% load static %} {% block title %} Papeleria | CMYK
+{% endblock %} {% block content %}
+
+<!-- Pagina de productos -->
+
+<section class="contenedor">
+  <!-- Contenedor de elementos -->
+  <div class="contenedor-items">
+    <div class="item">
+      <span class="titulo-item">Cuaderno Scary Movie</span>
+      <img src="{% static 'img/pap1.jpg' %}" alt="" class="img-item" />
+      <span class="precio-item">$6.500</span>
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <span class="titulo-item">Cuaderno Studio Ghibli</span>
+      <img src="{% static 'img/pap2.jpg' %}" alt="" class="img-item" />
+      <span class="precio-item">$7.500</span>
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <span class="titulo-item">Post'its Medicina</span>
+      <img src="{% static 'img/pap3.jpg' %}" alt="" class="img-item" />
+      <span class="precio-item">$1.500</span>
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <span class="titulo-item">set de Stickers: Anime</span>
+      <img src="{% static 'img/pap4.jpg' %}" alt="" class="img-item" />
+      <span class="precio-item">$1.500</span>
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <span class="titulo-item">Washitapes de series antiguas</span>
+      <img src="{% static 'img/pap5.jpg' %}" alt="" class="img-item" />
+      <span class="precio-item">$2.000</span>
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <span class="titulo-item">Post'its Cuadrados</span>
+      <img src="{% static 'img/pap6.jpg' %}" alt="" class="img-item" />
+      <span class="precio-item">$990</span>
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+  </div>
+  <!-- Carrito de Compras -->
+  <div class="carrito" id="carrito">
+    <div class="header-carrito">
+      <h2>Tu Carrito</h2>
+    </div>
+
+    <div class="carrito-items">
+      <!-- 
+                <div class="carrito-item">
+                    <img src="img/boxengasse.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Box Engasse</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$15.000,00</span>
+                    </div>
+                   <span class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </span>
+                </div>
+                <div class="carrito-item">
+                    <img src="img/skinglam.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Skin Glam</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="3" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$18.000,00</span>
+                    </div>
+                   <button class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </button>
+                </div>
+                 -->
+    </div>
+    <div class="carrito-total">
+      <div class="fila">
+        <strong>Tu Total</strong>
+        <span class="carrito-precio-total"> $120.000,00 </span>
+      </div>
+      <a href="{% url 'carrito' %}"
+        ><button class="btn-pagar">
+          Ir a pagar <i class="fa-solid fa-bag-shopping"></i></button
+      ></a>
+    </div>
+  </div>
+</section>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"
+></script>
+{% endblock %}
